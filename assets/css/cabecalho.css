@@ -1,0 +1,21 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--menu);
+    color: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+    .cabecalho__menu i::before {
+        font-size: 24px;
+    }
+
+    .cabecalho__imagem {
+        width: 12%;
+    }
+
+    .cabecalho__notificacao i::before {
+        font-size: 24px;
+    }
