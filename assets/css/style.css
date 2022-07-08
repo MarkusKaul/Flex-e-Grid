@@ -1,4 +1,10 @@
 @import url("cabecalho.css");
+@import url("menu.css");
+
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
 
 :root {
     --fundo-principal: #1D232A;
@@ -12,5 +18,9 @@
 }
 
 body {
+    font-family: 'Open Sans', 'icones';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--branco);
     background-color: var(--fundo-principal);
 }

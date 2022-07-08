@@ -9,13 +9,16 @@
 }
 
     .cabecalho__menu i::before {
+        content: "\e904";
         font-size: 24px;
     }
 
     .cabecalho__imagem {
-        width: 12%;
+        width: 40px;
     }
 
     .cabecalho__notificacao i::before {
+        content: "\e906";
         font-size: 24px;
     }
+

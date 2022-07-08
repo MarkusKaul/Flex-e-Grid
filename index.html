@@ -15,20 +15,38 @@
     </head>
     <body>
         <header class="cabecalho">
-            <button class="cabecalho__menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+            <button class="cabecalho__menu" aria-label="Menu">
+                <i></i>
+            </button>
             <img src="/assets/img/logo.svg" alt="Logotipo da HZC" class="cabecalho__imagem">
-            <button class="cabecalho__notificacao" aria-label="Notificação"><i class="fa-regular fa-bell"></i></button>
+            <button class="cabecalho__notificacao" aria-label="Notificação">
+                <i></i>
+            </button>
         </header>
 
         <nav class="menu-lateral">
             <img src="/assets/img/logo.svg" alt="" class="menu-lateral__logo" alt="Logotipo da HZC">
-            <a href="#" class="menu-lateral__link"></a>
-            <a href="#" class="menu-lateral__link"></a>
-            <a href="#" class="menu-lateral__link"></a>
-            <a href="#" class="menu-lateral__link"></a>
-            <a href="#" class="menu-lateral__link"></a>
-            <a href="#" class="menu-lateral__link"></a>
+            <a href="#" class="menu-lateral__link menu-lateral__link--inicio menu-lateral__link--ativo">Início</a>
+            <a href="#" class="menu-lateral__link menu-lateral__link--videos">Vídeos</a>
+            <a href="#" class="menu-lateral__link menu-lateral__link--picos">Picos</a>
+            <a href="#" class="menu-lateral__link menu-lateral__link--integrantes">Integrantes</a>
+            <a href="#" class="menu-lateral__link menu-lateral__link--camisas">Camisas</a>
+            <a href="#" class="menu-lateral__link menu-lateral__link--pinturas">Pinturas</a>
         </nav>    
 
+        <main class="principal">
+            <h2 class="titulo-pagina">Início</h2>
+            <article class="cartao">
+                <img src="/assets/img/banner-mobile_1.png" alt="Primeira imagem em destaque" class="cartao__imagem">
+                <p class="cartao__destaque">Vídeo em destaque</p>
+                <h3 class="cartao__titulo">HZC - Life is.../ 2021</h3>
+                <p class="cartao__perfil">Bruno Lopez</p>
+                <p class="cartao__info cartao__info--tempo">33 minutos</p>
+                <p class="cartao__info cartao__info--visualizacoes">53 visualizações</p>
+                <a href="#" class="cartao__botao cartao__botao--destaque cartao__botao--play">Assistir agora</a>
+            </article>
+        </main>
+
+        <script src="index.js"></script>
     </body>
 </html>
