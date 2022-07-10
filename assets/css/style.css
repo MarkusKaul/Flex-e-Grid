@@ -1,5 +1,7 @@
 @import url("cabecalho.css");
 @import url("menu.css");
+@import url("cartao.css");
+@import url("picos.css");
 
 @font-face {
     font-family: 'icones';
@@ -23,4 +25,12 @@ body {
     font-weight: 400;
     color: var(--branco);
     background-color: var(--fundo-principal);
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+    }
 }

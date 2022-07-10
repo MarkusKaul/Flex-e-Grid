@@ -17,8 +17,56 @@
         width: 40px;
     }
 
+    .cabecalho__perfil {
+        display: none;
+    }
+
     .cabecalho__notificacao i::before {
         content: "\e906";
         font-size: 24px;
     }
 
+@media screen and (min-width: 1440px) {
+    .cabecalho {
+        background-color: var(--fundo-principal);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 32px;
+        padding: 16px 60px;
+        height: 80px;
+        box-sizing: border-box;
+        grid-column: 2;
+    }
+
+    .cabecalho__perfil {
+        display: flex;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        justify-self: flex-end;
+        align-items: center;
+        padding: 8px 32px;
+        color: var(--cinza);
+        border-right: 1px solid var(--cinza);   
+    }
+
+    .cabecalho__perfil::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url("/assets/img/profile_4.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .cabecalho__perfil::after {
+        content: "\e90d";
+        color: var(--branco);
+        font-size: 1.5rem;
+    }
+
+    .cabecalho__menu, .cabecalho__imagem {
+        display: none;
+    }
+}

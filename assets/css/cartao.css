@@ -1,0 +1,246 @@
+.principal {
+    padding: 24px 16px;
+    display: grid;
+    gap: 16px;
+}
+
+.titulo-pagina {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.cartao {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--cartao);
+}
+
+.cartao--destaque {
+    margin-bottom: 16px;
+}
+
+.cartao__conteudo {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.cartao__destaque {
+    grid-column: span 2;
+}
+
+.cartao__imagem--desktop {
+    display: none;
+}
+
+.cartao__titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.cartao__perfil {
+    color: var(--cinza);
+    font-size: 0.9rem;
+    grid-column: span 2;
+}
+
+.cartao__info {
+    display: flex;
+    align-items: center;
+    color: var(--cinza);
+}
+
+.cartao__info--tempo::before {
+    content: "\e90c";
+    margin-right: 8px;
+}
+
+.cartao__info--visualizacoes::before {
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+.cartao__info--cifrao::before {
+    content: "\e905";
+    margin-right: 8px;
+}
+
+.cartao__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--botao);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    justify-self: flex-end;
+}
+
+.cartao__botao--play::before {
+    content: "\e90b";
+    font-size: 24px;    
+}
+
+.cartao__botao--carrinho::before {
+    content: "\e901";
+    font-size: 24px;    
+}
+
+.cartao__botao--localizacao::before {
+    content: "\e909";
+    font-size: 24px;    
+}
+
+.cartao__botao--destaque {
+    width: 100%; 
+    grid-column: span 2;   
+}
+
+.cartao__botao--destaque::before {
+    margin-right: 8px;
+}
+
+.secao {
+    display: grid;
+    gap: 16px
+}
+
+    .secao__titulo {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+.cartao-recentes {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .principal {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+            "titulo-pagina titulo-pagina titulo-pagina"
+            "destaque-videos destaque-videos videos-recentes"
+            "secao-videos secao-videos secao-videos"
+            "artes-recentes destaque-artes destaque-artes"
+            "secao-artes secao-artes secao-artes"
+        ;
+        column-gap: 32px;
+        padding: 16px 60px;
+        grid-column: 2;
+    }
+
+    .cartao--destaque {
+        margin-bottom: 0px;
+    }
+
+    .titulo-pagina {
+        grid-area: titulo-pagina;
+    }
+
+    .cartao__botao--destaque {
+        grid-column: auto;
+        padding: 16px 8px;
+        justify-self: flex-start;
+    }
+
+    .cartao-recentes {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        align-self: flex-start;
+        row-gap: 24px;
+        width: 256px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .cartao-recentes .cartao__titulo {
+        grid-column: auto;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .cartao__link {
+        color: var(--links);
+        font-size: 0.8rem;
+        justify-self: flex-end;
+    }
+
+    .cartao__lista {
+        display: grid;
+        row-gap: 16px;
+        grid-column: span 2;
+    }
+
+    .cartao__item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+    }
+
+    .cartao__item-thumbnail {
+        grid-row: span 2;
+        width: 32px;
+        box-sizing: border-box;
+    }
+
+    .cartao__item-titulo {
+        line-height: 1.2rem;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--branco);
+    }
+
+    .cartao__item-perfil {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--cinza);
+    }
+
+    .secao {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .secao__titulo {
+        grid-column: span 4;
+    }
+
+    .cartao__imagem--mobile {
+        display: none;
+    }
+
+    .cartao__imagem--desktop {
+        display: block;
+    }
+
+    .destaque-videos {
+        grid-area: destaque-videos;
+    }
+
+    .videos-recentes {
+        grid-area: videos-recentes;
+    }
+
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+
+    .artes-recentes {
+        grid-area: artes-recentes;
+    }
+
+    .destaque-artes {
+        grid-area: destaque-artes;
+    }
+
+    .secao-artes {
+        grid-area: secao-artes;
+    }
+}
